@@ -1,0 +1,58 @@
+import turtle
+
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+pen = turtle.Turtle()
+pen.speed(0)
+pen.hideturtle()
+
+def draw_triangle(colour, x1, y1, x2, y2, x3, y3):
+  pen.penup()
+  pen.pendown()
+  pen.color(colour)
+  pen.begin_fill()
+  pen.goto(x2, y2)
+  pen.goto(x3, y3)
+  pen.goto(x1, y1)
+  pen.end_fill()
+  
+
+left = -300
+bottom = -150
+right = 300
+top = 150
+
+draw_triangle("navy",left, bottom, right, top, left, bottom)
+draw_triangle("gold",left, bottom, 0, top, 0, bottom)
+draw_triangle("red", left, bottom, right, top, 0, bottom)
+draw_triangle("white", left, bottom, right, 0, 0, bottom)
+draw_triangle("green", left, bottom, right, bottom, right, 0)
+turtle.down()
+
+# pen.color("yellow")
+# pen.begin_fill()
+# pen.goto(500,500)
+# pen.pendown()
+# pen.forward(500)
+# pen.right(90)
+# pen.backward(-300)
+# pen.end_fill()
+
+# pen.color("red")
+# pen.begin_fill()
+# pen.goto(200,200)
+# pen.pendown()
+# pen.forward(200)
+# pen.right(90)
+# pen.backward(-200)
+# pen.end_fill()
+
+# pen.color("white")
+# pen.begin_fill()
+# pen.goto(400,400)
+# pen.pendown()
+# pen.forward(200)
+# pen.right(90)
+# pen.backward(-200)
+# pen.end_fill()
